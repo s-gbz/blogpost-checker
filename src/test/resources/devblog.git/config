@@ -5,4 +5,4 @@
 	symlinks = false
 	ignorecase = true
 [remote "origin"]
-	url = https://github.com/jo2/devblog
+	url = https://github.com/jo2/devblog.git
