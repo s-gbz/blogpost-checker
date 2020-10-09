@@ -42,3 +42,9 @@ tasks.withType(Test) {
 		showStandardStreams true
 	}
 }
+
+sourceSets {
+    test {
+        output.resourcesDir = "build/resources/test"
+    }
+}
