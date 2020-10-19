@@ -25,7 +25,7 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('org.eclipse.jgit:org.eclipse.jgit:5.4.0.201906121030-r')
+	compile('org.eclipse.jgit:org.eclipse.jgit:5.9.0.202009080501-r')
 	compile "io.fabric8:gitective-core:0.9.10"
 	compile 'org.yaml:snakeyaml:1.21'
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
@@ -33,4 +33,18 @@ dependencies {
 
 test {
 	useJUnitPlatform()
+}
+
+tasks.withType(Test) {
+	testLogging {
+		exceptionFormat "full"
+		events "started", "skipped", "passed", "failed"
+		showStandardStreams true
+	}
+}
+
+sourceSets {
+    test {
+        output.resourcesDir = "build/resources/test"
+    }
 }

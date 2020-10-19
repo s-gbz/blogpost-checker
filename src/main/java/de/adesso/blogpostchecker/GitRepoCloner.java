@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 
 @Service
 public class GitRepoCloner {
